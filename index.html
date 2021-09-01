@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,5 +10,26 @@
 </head>
 <body>
     <header>Mensagem Oculta</header>
+    <main>
+        <form action="">
+            <label for="selecao">Selecione o tipo de codificação</label>
+            <select name="selecao" id="">
+                <option value="">Cifra de César</option>
+                <option value="">Base 64</option>
+            </select><br>
+            <label for="text">Digite Aqui:</label><br>
+            <textarea name="" id="" cols="50" rows="6"></textarea><br>
+            <label for="codificar">Codificar</label>
+            <input type="radio" name="codificarDecodificar" id="cifra">
+            <label for="decodificar">Decodificar</label>
+            <input type="radio" name="codificarDecodificar" id="base64"><br>
+            <button>Enviar</button>
+        </form>
+        <section><br>
+            <label for="textarea">Resultado:</label><br>
+            <textarea name="" id="" cols="50" rows="6"></textarea><br>
+            <button>Copiar Resultado</button>
+        </section>
+    </main>
 </body>
 </html>
