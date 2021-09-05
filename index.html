@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <title>Mensagem Oculta</title>
 </head>
 <body>
@@ -13,21 +13,31 @@
     <main>
         <form action="">
             <label for="selecao">Selecione o tipo de codificação</label>
-            <select name="selecao" id="">
-                <option value="">Cifra de César</option>
-                <option value="">Base 64</option>
-            </select><br>
+            <select name="selecao" id="selecao">
+                <option value="baseSelecao" id="baseSelecao">Base64</option>
+                <option value="cifraSelecao" id="cifraSelecao">Cifra de César</option>
+            </select>
+            <br>
+            <br>
+            
+            <div id="divPassos" style="display: none;"><br>
+                <label for="passos" id="labelPasso">Escolha o numero de passos:</label>
+                <input type="number" id="passos" min="1" max="100">
+            </div>
+
             <label for="text">Digite Aqui:</label><br>
-            <textarea name="" id="" cols="50" rows="6"></textarea><br>
+            <textarea name="" id="texto" cols="50" rows="6"></textarea><br>
+
             <label for="codificar">Codificar</label>
-            <input type="radio" name="codificarDecodificar" id="cifra">
+            <input type="radio" name="codificarDecodificar" id="codificar" checked>
             <label for="decodificar">Decodificar</label>
-            <input type="radio" name="codificarDecodificar" id="base64"><br>
-            <button>Enviar</button>
+            <input type="radio" name="codificarDecodificar" id="decodificar"><br>
+
+            <button id="enviarTexto">Enviar</button>
         </form>
         <section><br>
             <label for="textarea">Resultado:</label><br>
-            <textarea name="" id="" cols="50" rows="6"></textarea><br>
+            <textarea name="" id="resultado" cols="50" rows="6"></textarea><br>
             <button>Copiar Resultado</button>
         </section>
     </main>
